@@ -16,6 +16,12 @@
     <Filter Include="3rd">
       <UniqueIdentifier>{78ba33f8-f526-44a8-8246-f3604a61bc7c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="shaders_ogl">
+      <UniqueIdentifier>{6c30f2d0-ace4-4b04-8384-feda51e86b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders_dx">
+      <UniqueIdentifier>{cbd49e59-dec1-4f72-946f-9833441b5699}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -27,5 +33,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="FragmentShader.glsl">
+      <Filter>shaders_ogl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VertexShader.glsl">
+      <Filter>shaders_ogl</Filter>
+    </FxCompile>
+    <FxCompile Include="VertexShader.hlsl">
+      <Filter>shaders_dx</Filter>
+    </FxCompile>
+    <FxCompile Include="FragmentShader.hlsl">
+      <Filter>shaders_dx</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
