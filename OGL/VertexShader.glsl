@@ -1,12 +1,15 @@
-#version 330
+#version 330 core
 
-layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aCol;
+layout (location = 0) in vec3 in_position;
+layout (location = 1) in vec3 in_color;
+layout (location = 2) in vec2 in_texCoord;
 
-out vec4 in_color;
+out vec4 color;
+out vec2 tex_coords;
 
 void main()
 {
-	in_color = vec4(aCol.xyz, 1.0f);
-    gl_Position = vec4(aPos.xyz, 1.0f);
+	color = vec4(color.xyz, 1.0f);
+	tex_coords = in_texCoord;
+    gl_Position = vec4(in_position.xyz, 1.0f);
 }

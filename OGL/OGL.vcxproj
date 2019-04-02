@@ -70,8 +70,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <SourcePath>$(VC_SourcePath);C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\GLAD\src;</SourcePath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\GLAD\include;</IncludePath>
+    <SourcePath>$(VC_SourcePath);C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\GLAD\src;C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\GLAD\include;C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\soil\src;</SourcePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\GLAD\include;C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\soil\src;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\GLAD\include;C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\soil;</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <SourcePath>$(VC_SourcePath);C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party\GLAD\src;</SourcePath>
@@ -83,9 +84,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party;</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>C:\Users\andre\Documents\Visual Studio 2019\Projects\OGL\3rd_party;</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>SOIL.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -172,7 +177,15 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="ShaderProcesser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OGL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="imgs\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
