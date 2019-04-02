@@ -30,6 +30,9 @@
     <ClCompile Include="..\3rd_party\GLAD\src\glad.c">
       <Filter>3rd</Filter>
     </ClCompile>
+    <ClCompile Include="ShaderProcesser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -47,5 +50,10 @@
     <FxCompile Include="FragmentShader.hlsl">
       <Filter>shaders_dx</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ShaderProcesser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
