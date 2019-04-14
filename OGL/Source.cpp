@@ -60,6 +60,8 @@ void init_triangle()
 	glBindVertexArray(0);
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &VAO);
+
+	// comment2
 }
 
 void init_textures()
@@ -75,8 +77,6 @@ void init_textures()
 
 	SOIL_free_image_data(image);
 	glBindTexture(GL_TEXTURE_2D, 0);
-
-	// comment1
 }
 
 void render(GLFWwindow* wnd)
