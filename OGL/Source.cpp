@@ -75,6 +75,8 @@ void init_textures()
 
 	SOIL_free_image_data(image);
 	glBindTexture(GL_TEXTURE_2D, 0);
+
+	// comment1
 }
 
 void render(GLFWwindow* wnd)
