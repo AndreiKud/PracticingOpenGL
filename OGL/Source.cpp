@@ -62,6 +62,8 @@ void init_triangle()
 	glBindVertexArray(0);
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &VAO);
+
+	// comment2
 }
 
 void init_textures()
