@@ -17,6 +17,8 @@ void error_handler(int err_code, const char* msg)
 	std::cout << "Err no. " << err_code << ": " << msg << std::endl;
 	glfwTerminate();
 	exit(1);
+
+	// review this pls
 }
 
 void framebuffer_size_callback(GLFWwindow* wnd, int width, int height)
@@ -30,8 +32,6 @@ void process_input(GLFWwindow* wnd)
 	{
 		glfwSetWindowShouldClose(wnd, GLFW_TRUE);
 	}
-
-	// comment3
 }
 
 void init_triangle()
