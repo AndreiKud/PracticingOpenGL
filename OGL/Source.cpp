@@ -17,8 +17,6 @@ void error_handler(int err_code, const char* msg)
 	std::cout << "Err no. " << err_code << ": " << msg << std::endl;
 	glfwTerminate();
 	exit(1);
-
-	// review this pls
 }
 
 void framebuffer_size_callback(GLFWwindow* wnd, int width, int height)
@@ -85,6 +83,8 @@ void render(GLFWwindow* wnd)
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	glDrawArrays(GL_TRIANGLES, 0, 3);
+
+	// oh i fixed it now senpai 1
 }
 
 void set_uni()
